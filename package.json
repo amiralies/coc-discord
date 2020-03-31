@@ -4,9 +4,11 @@
   "description": "discord rich presence for coc.nvim",
   "main": "lib/index.js",
   "scripts": {
+    "clean": "rm -rf lib/",
     "build": "tsc -p tsconfig.json",
     "watch": "tsc -w -p tsconfig.json",
-    "lint": "eslint src/*"
+    "lint": "eslint src/*",
+    "prepack": "yarn clean && yarn lint && yarn build"
   },
   "keywords": [
     "coc.nvim",
