@@ -1,0 +1,11 @@
+root: true
+parserOptions:
+  project: './tsconfig.json'
+plugins:
+  - '@typescript-eslint'
+extends:
+  - airbnb-typescript/base
+
+rules:
+  import/no-extraneous-dependencies: 'off'
+  import/prefer-default-export: 'off'

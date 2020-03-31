@@ -1,0 +1,24 @@
+{
+  "name": "coc-discord",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -w -p tsconfig.json",
+    "lint": "eslint src/*"
+  },
+  "license": "MIT",
+  "engines": {
+    "coc": ">=0.0.70"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.1",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "coc.nvim": "^0.0.76",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.2.0",
+    "eslint-plugin-import": "^2.20.1",
+    "typescript": "^3.8.3"
+  }
+}

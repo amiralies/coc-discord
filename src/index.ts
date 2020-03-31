@@ -1,0 +1,3 @@
+function activate() {}
+
+export { activate };
