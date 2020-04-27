@@ -9,7 +9,7 @@ const setActivity = (client: Client, startTimestamp: number) => {
   const details = pipe(
     O.fromNullable(workspace.uri),
     O.filter((x) => x.startsWith('file:///')),
-    O.map((x) => x.substr(6)),
+    O.map((x) => x.substr(8)),
     O.map((x) => x.split('/')),
     O.filter((xs) => xs.length > 0),
     O.map((xs) => xs.reverse()[0]),
