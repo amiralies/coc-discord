@@ -33,7 +33,8 @@ const activate = () => {
   const discordRpcClient = new Client({ transport: 'ipc' });
 
   discordRpcClient.connect(clientId);
-  discordRpcClient.login({ clientId });
+  discordRpcClient.login({ clientId })
+    .catch(() => console.warn('Could not connect coc-discord client to Discord.'));
 
   const startTimestamp = Date.now();
 
