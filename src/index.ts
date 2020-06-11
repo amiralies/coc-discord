@@ -33,8 +33,9 @@ const activate = () => {
   const discordRpcClient = new Client({ transport: 'ipc' });
 
   discordRpcClient.connect(clientId);
-  discordRpcClient.login({ clientId })
-    .catch(() => console.warn('Could not connect coc-discord client to Discord.'));
+  // eslint-disable-next-line no-console
+  discordRpcClient.login({ clientId }).catch(() => console.warn('Could not connect coc-discord client to Discord.'));
+  // TODO Add output channel
 
   const startTimestamp = Date.now();
 
