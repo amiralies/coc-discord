@@ -67,7 +67,7 @@ export class Logger {
    * @param {data?} Optional additional data.
    */
   public log(logLevel: string, message: string, data?: any): void {
-    this.output.appendLine(`[${logLevel} - ${new Date().toLocaleTimeString()}] - ${message}`);
+    this.output.appendLine(`[${logLevel}  - ${new Date().toLocaleTimeString()}] - ${message}`);
 
     if (data) {
       this.output.appendLine(this.dataToString(data));
