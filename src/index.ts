@@ -2,8 +2,10 @@ import { workspace } from 'coc.nvim';
 import { Client } from 'discord-rpc';
 import * as O from 'fp-ts/lib/Option';
 import { pipe } from 'fp-ts/lib/pipeable';
+import { Logger } from './utils/logger';
 
 const clientId = '694558978776105000';
+const logger = new Logger('discord');
 
 const setActivity = (client: Client, startTimestamp: number) => {
   const details = pipe(
@@ -33,9 +35,7 @@ const activate = () => {
   const discordRpcClient = new Client({ transport: 'ipc' });
 
   discordRpcClient.connect(clientId);
-  // eslint-disable-next-line no-console
-  discordRpcClient.login({ clientId }).catch(() => console.warn('Could not connect coc-discord client to Discord.'));
-  // TODO Add output channel
+  discordRpcClient.login({ clientId }).catch((e) => logger.warn(e));
 
   const startTimestamp = Date.now();
 
