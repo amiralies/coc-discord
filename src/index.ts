@@ -4,9 +4,9 @@ import * as O from 'fp-ts/lib/Option';
 import { pipe } from 'fp-ts/lib/pipeable';
 import { Logger } from './utils/logger';
 
-const clientId:string = '694558978776105000';
-const logger:Logger = new Logger('discord');
-const ELAPSE_UPDATE_DURATION:number = 10000;
+const clientId: string = '694558978776105000';
+const logger: Logger = new Logger('discord');
+const ELAPSE_UPDATE_DURATION: number = 10000;
 
 const setActivity = (client: Client, startTimestamp: number) => {
   const details = pipe(

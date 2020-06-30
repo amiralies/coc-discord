@@ -7,7 +7,7 @@
     "clean": "rm -rf lib/",
     "build": "tsc -p tsconfig.json",
     "watch": "tsc -w -p tsconfig.json",
-    "lint": "eslint src/*",
+    "lint": "eslint src --ext .ts",
     "prepack": "yarn clean && yarn lint && yarn build"
   },
   "keywords": [
